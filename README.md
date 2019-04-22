@@ -5,7 +5,7 @@
 ![show](https://github.com/vishalgawade/Data-Aggregation-Big-Data-Analysis-and-Visualization-of-Twitter-New-York-Times-Common-Crawl/blob/master/images/show.png)
 
 Goal
-------
+---
 Learn Parallel Processing of Big Data using Hadoop MapReduce and Build Analysis and Visualization Dashboard(s) using Tableau</br>
 
 
@@ -17,6 +17,7 @@ Tennis, Rugby, Golf.
 ###### Part1- Data Collection
 ###### Part2- Trying demo on apache hadoop
 ###### Part3- Big Data Analysis on AWS EMR and Visualization in Tableau 
+
 #### Data Collection from below three sources:
 
 1.  **New York Times**: To collect data from New York times, we use New
@@ -145,3 +146,14 @@ deployed the code; you can click on the below link to view the
 visualization:
 
 [Link to Visualization results](https://vishalgawade.github.io/wordcloud_hadoop/visualization.html)
+
+License
+---
+Copyright {2019} 
+{Vishal Gawade vgawade@buffalo.edu & Deepak Goyal dgoyal2@buffalo.edu} 
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
