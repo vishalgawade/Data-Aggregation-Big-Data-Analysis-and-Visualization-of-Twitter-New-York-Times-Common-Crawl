@@ -1,0 +1,10 @@
+rugby   7176
+club    834
+player  778
+team    730
+league  682
+israel  662
+game    570
+live    546
+australia   546
+match   546

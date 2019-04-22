@@ -1,0 +1,10 @@
+baseball    3576
+game    859
+win 384
+team    312
+varsity 238
+league  234
+inning  231
+run 221
+score   215
+day 215

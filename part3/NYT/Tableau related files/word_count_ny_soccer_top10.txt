@@ -1,0 +1,10 @@
+team    609
+national    595
+soccer  585
+player  481
+year    374
+club    356
+cup 319
+goal    311
+league  292
+city    232

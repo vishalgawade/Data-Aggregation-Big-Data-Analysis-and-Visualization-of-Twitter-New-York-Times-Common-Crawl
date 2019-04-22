@@ -1,0 +1,10 @@
+rugby-player	607
+rugby-league	550
+rugby-team	506
+baseball-game	481
+rugby-australia	468
+tennis-team	404
+tennis-today	342
+rugby-star	324
+tennis-match	316
+football-game	291

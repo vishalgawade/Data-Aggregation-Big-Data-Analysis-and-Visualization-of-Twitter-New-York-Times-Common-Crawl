@@ -1,0 +1,10 @@
+golf-club	21300
+rugby-league	21084
+team-game	17446
+game-soccer	16001
+nike-baseball	15063
+soccer-sport	14662
+nike-august	14341
+club-duke	12867
+nike-air	12021
+tennis-adidas	9921

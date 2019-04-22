@@ -1,0 +1,10 @@
+run 649
+game    615
+player  609
+year    589
+season  557
+baseball    536
+team    449
+league  397
+match   393
+series  381

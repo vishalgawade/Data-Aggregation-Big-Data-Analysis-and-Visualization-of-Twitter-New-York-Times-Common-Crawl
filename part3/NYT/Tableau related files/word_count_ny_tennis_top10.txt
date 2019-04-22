@@ -1,0 +1,10 @@
+game    800
+tennis  498
+match   476
+year    463
+open    462
+player  460
+win 360
+tournament  332
+time    322
+federer 309

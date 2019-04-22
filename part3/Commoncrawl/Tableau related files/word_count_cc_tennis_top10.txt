@@ -1,0 +1,10 @@
+series  2485
+tennis  1382
+man 1103
+adidas  1090
+price   897
+service 797
+woman   790
+nike    699
+sport   682
+air 619

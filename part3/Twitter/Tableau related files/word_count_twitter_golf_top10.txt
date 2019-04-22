@@ -1,0 +1,10 @@
+golf    2443
+master  378
+course  269
+tiger   199
+day 185
+like    163
+great   155
+club    153
+time    149
+today   139

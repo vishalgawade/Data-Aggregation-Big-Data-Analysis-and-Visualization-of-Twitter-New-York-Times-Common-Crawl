@@ -1,0 +1,10 @@
+club    680
+golf    446
+year    424
+player  310
+time    293
+tour    245
+first   244
+national    230
+tournament  220
+game    213

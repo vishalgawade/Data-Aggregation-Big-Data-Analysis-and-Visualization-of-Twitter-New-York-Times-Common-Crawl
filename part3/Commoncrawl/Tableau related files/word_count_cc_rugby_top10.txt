@@ -1,0 +1,10 @@
+nike    1305
+rugby   960
+club    844
+news    701
+sport   660
+air 614
+game    597
+woman   595
+new 560
+men 545

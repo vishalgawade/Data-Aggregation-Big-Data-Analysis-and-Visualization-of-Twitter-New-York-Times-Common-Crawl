@@ -1,0 +1,10 @@
+rugby   7604
+tennis  4298
+baseball    4282
+football    3514
+golf    2731
+game    2651
+soccer  2513
+team    2220
+player  1695
+sport   1638

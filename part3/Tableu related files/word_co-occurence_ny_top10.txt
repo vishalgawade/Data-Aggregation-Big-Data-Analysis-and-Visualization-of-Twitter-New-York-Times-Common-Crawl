@@ -1,0 +1,10 @@
+team-player	269
+player-golf	268
+league-baseball	244
+player-team	236
+player-game	200
+team-year	190
+tennis-player	177
+league-team	169
+golf-course	168
+player-league	165

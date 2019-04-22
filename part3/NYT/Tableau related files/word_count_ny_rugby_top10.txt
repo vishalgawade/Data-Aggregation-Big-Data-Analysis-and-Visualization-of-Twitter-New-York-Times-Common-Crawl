@@ -1,0 +1,10 @@
+league  636
+coach   382
+year    330
+football    320
+school  289
+player  288
+rugby   271
+game    229
+match   210
+like    186

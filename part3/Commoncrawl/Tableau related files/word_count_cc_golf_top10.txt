@@ -1,0 +1,10 @@
+game    5637
+golf    3433
+wining  3082
+player  2974
+short   2902
+test    2839
+club    2803
+match   1963
+tournament  1951
+service 1514

@@ -1,0 +1,9 @@
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming-2.6.0-cdh5.7.0.jar \
+-file /src/mapper.py    -mapper /src/mapper.py \
+-file /src/reducer.py   -reducer /src/reducer.py \
+-input /user/vgawade/MR/input/* -output /user/vgawade/MR/output
+
+hadoop fs -cat /user/vgawade/MR/output/part*
+hadoop fs –get /user/vgawade/MR/output/ /src/
+
+hadoop fs -get /user/vgawade/MR/output/ /src/

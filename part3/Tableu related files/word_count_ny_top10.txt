@@ -1,0 +1,10 @@
+sport   3360
+league  2180
+player  1990
+baseball    1458
+tennis  1382
+team    1327
+game    1296
+match   1271
+nike    1129
+golf    1100

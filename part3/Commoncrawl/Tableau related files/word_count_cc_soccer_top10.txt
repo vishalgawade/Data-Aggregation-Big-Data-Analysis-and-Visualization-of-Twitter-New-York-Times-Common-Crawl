@@ -1,0 +1,10 @@
+club    15151
+soccer  7528
+league  7425
+team    7385
+win 6254
+ticket  4992
+game    2701
+sport   2501
+service 2086
+woman   1998

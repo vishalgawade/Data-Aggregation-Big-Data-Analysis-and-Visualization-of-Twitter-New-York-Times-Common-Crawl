@@ -1,0 +1,10 @@
+soccer  2182
+play    1529
+red 1491
+game    461
+team    322
+goal    221
+girl    214
+player  208
+like    202
+sport   202

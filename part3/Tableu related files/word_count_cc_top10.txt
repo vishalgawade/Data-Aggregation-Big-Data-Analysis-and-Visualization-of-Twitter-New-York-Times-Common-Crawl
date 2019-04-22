@@ -1,0 +1,10 @@
+club    24615
+baseball    24437
+league  16656
+team    16032
+game    13435
+soccer  13315
+nike    8136
+tennis  5822
+golf    5339
+rugby   5200

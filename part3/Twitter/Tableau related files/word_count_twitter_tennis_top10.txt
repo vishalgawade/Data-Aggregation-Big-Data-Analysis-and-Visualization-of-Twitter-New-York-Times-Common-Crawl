@@ -1,0 +1,10 @@
+tennis  4025
+boy 640
+player  617
+match   564
+team    523
+girl    516
+win 506
+season  441
+men 438
+woman   410

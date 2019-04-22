@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Data Visualization</title>
+<style>
+body {
+  background-color: white;
+  text-align: center;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+<body>
+
+    <div style="background-color: #3f51b5;
+    height: 64px;
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 16px;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    color: white;
+    text-align: center;">
+        <span style="font-size: xx-large">Word Cloud Visualization of Twitter/NY Times/Common Crawl Data</span><br>
+    
+  </div>
+  <div style="margin-top: 10px">
+      <input type="radio" name="gender"  onclick="radioFunction(this)" value="wordCooccurence" checked="checked"/> Word Co-Occurence
+      <input type="radio" name="gender"  onclick="radioFunction(this)" value="wordCount"/> Word Count
+      <br>
+      <br>
+    <form action="#" method="get">
+      <span>Data Source</span>
+    <select id="dataSource" onchange="onDataSourceChange()" data-native-menu="false">
+      <!-- <option value="select" selected="selected">Select</option> -->
+      <option value="twitter" selected="selected">Twitter</option>
+      <option value="nyTimes">New York Times</option>
+      <option value="cc">Common Crawl</option>
+    </select>
+    <span style="margin-left: 10px">Topic</span>
+    <select id="subTopic" onchange="onSubtopicChange()" data-native-menu="false">
+      <!-- <option value="select" selected="selected">Select</option> -->
+      <option value="all" selected="selected">Sports</option>
+      <option value="baseball">Baseball</option>
+      <option value="soccer">Soccer</option>
+      <option value="golf">Golf</option>
+      <option value="tennis">Tennis</option>
+      <option value="rugby">Rugby</option>
+    </select>
+  </form>
+</div>
+
+
+<div class='tableauPlaceholder' id='18' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tw&#47;Twitter_Sports_Top10_Word_Co-occurence&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Twitter_Sports_Top10_Word_Co-occurence&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tw&#47;Twitter_Sports_Top10_Word_Co-occurence&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>  
+
+<div class='tableauPlaceholder' id='0' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tw&#47;Twitter_Baseball_Top10&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Twitter_Baseball_Top10&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tw&#47;Twitter_Baseball_Top10&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>               
+
+<div class='tableauPlaceholder' id='1' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tw&#47;Twitter_Soccer_Top10&#47;Sheet4&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Twitter_Soccer_Top10&#47;Sheet4' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tw&#47;Twitter_Soccer_Top10&#47;Sheet4&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div> 
+
+<div class='tableauPlaceholder' id='2' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tw&#47;Twitter_Golf_Top10&#47;Sheet2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Twitter_Golf_Top10&#47;Sheet2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tw&#47;Twitter_Golf_Top10&#47;Sheet2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div> 
+
+<div class='tableauPlaceholder' id='3' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tw&#47;Twitter_Tennis_Top10&#47;Sheet5&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Twitter_Tennis_Top10&#47;Sheet5' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tw&#47;Twitter_Tennis_Top10&#47;Sheet5&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div> 
+
+<div class='tableauPlaceholder' id='4' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tw&#47;Twitter_Rugby_Top10&#47;Sheet3&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Twitter_Rugby_Top10&#47;Sheet3' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tw&#47;Twitter_Rugby_Top10&#47;Sheet3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>         
+<div class='tableauPlaceholder' id='5' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYT_Baseball_Top10&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='NYT_Baseball_Top10&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYT_Baseball_Top10&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div> 
+
+<div class='tableauPlaceholder' id='6' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYT_Soccer_Top10&#47;Sheet4&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='NYT_Soccer_Top10&#47;Sheet4' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYT_Soccer_Top10&#47;Sheet4&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>
+
+<div class='tableauPlaceholder' id='7' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYT_Golf_Top10&#47;Sheet3&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='NYT_Golf_Top10&#47;Sheet3' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYT_Golf_Top10&#47;Sheet3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>
+
+
+<div class='tableauPlaceholder' id='8' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYT_Tennis_Top10&#47;Sheet5&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='NYT_Tennis_Top10&#47;Sheet5' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYT_Tennis_Top10&#47;Sheet5&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>
+
+
+<div class='tableauPlaceholder' id='9' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYT_Rugby_Top10&#47;Sheet2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='NYT_Rugby_Top10&#47;Sheet2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYT_Rugby_Top10&#47;Sheet2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>
+
+<div class='tableauPlaceholder' id='10' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CC&#47;CC_Baseball_Top10&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='CC_Baseball_Top10&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CC&#47;CC_Baseball_Top10&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div> 
+
+
+<div class='tableauPlaceholder' id='11' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CC&#47;CC_Soccer_Top10&#47;Sheet4&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='CC_Soccer_Top10&#47;Sheet4' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CC&#47;CC_Soccer_Top10&#47;Sheet4&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>  
+
+
+<div class='tableauPlaceholder' id='12' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CC&#47;CC_Golf_Top10&#47;Sheet2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='CC_Golf_Top10&#47;Sheet2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CC&#47;CC_Golf_Top10&#47;Sheet2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>  
+
+<div class='tableauPlaceholder' id='13' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CC&#47;CC_Tennis_Top10&#47;Sheet5&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='CC_Tennis_Top10&#47;Sheet5' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CC&#47;CC_Tennis_Top10&#47;Sheet5&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>   
+
+<div class='tableauPlaceholder' id='14' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CC&#47;CC_Rugby_Top10&#47;Sheet3&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='CC_Rugby_Top10&#47;Sheet3' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CC&#47;CC_Rugby_Top10&#47;Sheet3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>  
+
+
+<div class='tableauPlaceholder' id='15' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tw&#47;Twitter_Sports_Top10&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Twitter_Sports_Top10&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tw&#47;Twitter_Sports_Top10&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>     
+
+
+<div class='tableauPlaceholder' id='16' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYT_Sports_Top10&#47;Sheet2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='NYT_Sports_Top10&#47;Sheet2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYT_Sports_Top10&#47;Sheet2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>         
+
+
+<div class='tableauPlaceholder' id='17' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CC&#47;CC_Sports_Top10&#47;Sheet3&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='CC_Sports_Top10&#47;Sheet3' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CC&#47;CC_Sports_Top10&#47;Sheet3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>        
+
+<!-- <div class='tableauPlaceholder' id='18' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tw&#47;Twitter_Sports_Top10_Word_Co-occurence&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Twitter_Sports_Top10_Word_Co-occurence&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tw&#47;Twitter_Sports_Top10_Word_Co-occurence&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>    -->            
+
+
+<div class='tableauPlaceholder' id='19' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYT_Sports_Top10_Word_Co-occurence&#47;Sheet2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='NYT_Sports_Top10_Word_Co-occurence&#47;Sheet2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYT_Sports_Top10_Word_Co-occurence&#47;Sheet2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div> 
+
+
+<div class='tableauPlaceholder' id='20' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CC&#47;CC_Sports_Top10_Word_Co-occurence&#47;Sheet3&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='CC_Sports_Top10_Word_Co-occurence&#47;Sheet3' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CC&#47;CC_Sports_Top10_Word_Co-occurence&#47;Sheet3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div> 
+
+
+<script type='text/javascript'>
+        var divElement = new Array(21);
+        var vizElement = new Array(21);
+        var scriptElement = new Array(21);
+        var radioSelected = "wordCooccurence";
+        for (var i = 0; i < 21; i++) {
+            divElement[i] = document.getElementById(''+i);                    
+            vizElement[i] = divElement[i].getElementsByTagName('object')[0];                    
+            vizElement[i].style.width='100%';
+            vizElement[i].style.height=(divElement[i].offsetWidth*0.75)+'px';                    
+            scriptElement[i] = document.createElement('script');                    
+            scriptElement[i].src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+            vizElement[i].parentNode.insertBefore(scriptElement[i], vizElement[i]);
+        }   
+
+        setTimeout(function(){ for (var i = 0; i < 21; i++) {
+            document.getElementById(""+i).style.display = "none";
+        }
+
+        document.getElementById("18").style.display = "block";
+        document.getElementById("subTopic").disabled=true; }, 1000);
+
+
+
+    function radioFunction(event){
+        if(event.value == "wordCooccurence"){
+            radioSelected = "wordCooccurence";
+            var ds = document.getElementById("dataSource");
+            var ds_value = ds.options[ds.selectedIndex].value;
+            var st = document.getElementById("subTopic");
+            var st_value = st.options[st.selectedIndex].value;
+            document.getElementById("subTopic").disabled=true;
+            document.getElementById("subTopic").value = "all"
+            for (var i = 0; i < 21; i++) {
+                document.getElementById(""+i).style.display = "none";
+            }
+            if(ds_value == "twitter"){
+                document.getElementById("18").style.display = "block";
+            }else if(ds_value == "nyTimes"){
+                document.getElementById("19").style.display = "block";
+            }else if(ds_value == "cc"){
+                document.getElementById("20").style.display = "block";
+            }
+        }else{
+            radioSelected = "wordCount";
+            document.getElementById("subTopic").disabled=false;
+            document.getElementById("subTopic").value = "all";
+            onSubtopicChange();
+        }
+    }
+    function onDataSourceChange(){
+        if(radioSelected == "wordCount"){
+            onSubtopicChange();
+            return;
+        }
+        for (var i = 0; i < 21; i++) {
+            document.getElementById(""+i).style.display = "none";
+        }
+        var ds = document.getElementById("dataSource");
+        var ds_value = ds.options[ds.selectedIndex].value;
+        if(ds_value == "twitter"){
+            document.getElementById("18").style.display = "block";
+        }else if(ds_value == "nyTimes"){
+            document.getElementById("19").style.display = "block";
+        }else if(ds_value == "cc"){
+            document.getElementById("20").style.display = "block";
+        }
+    }
+    function onSubtopicChange() {
+        var ds = document.getElementById("dataSource");
+        var ds_value = ds.options[ds.selectedIndex].value;
+        var st = document.getElementById("subTopic");
+        var st_value = st.options[st.selectedIndex].value;        
+
+        if(ds_value == "twitter"){
+            for (var i = 0; i < 21; i++) {
+                document.getElementById(""+i).style.display = "none";
+            }if(st_value == "all"){
+                document.getElementById("15").style.display = "block";
+            }else if(st_value == "baseball"){
+                document.getElementById("0").style.display = "block";
+            }else if(st_value == "soccer"){
+                document.getElementById("1").style.display = "block";
+            }else if(st_value == "golf"){
+                document.getElementById("2").style.display = "block";
+            }else if(st_value == "tennis"){
+                document.getElementById("3").style.display = "block";
+            }else if(st_value == "rugby"){
+                document.getElementById("4").style.display = "block";
+            }
+        }else if(ds_value == "nyTimes"){
+            for (var i = 0; i < 21; i++) {
+                document.getElementById(""+i).style.display = "none";
+            }if(st_value == "all"){
+                document.getElementById("16").style.display = "block";
+            }else if(st_value == "baseball"){
+                document.getElementById("5").style.display = "block";
+            }else if(st_value == "soccer"){
+                document.getElementById("6").style.display = "block";
+            }else if(st_value == "golf"){
+                document.getElementById("7").style.display = "block";
+            }else if(st_value == "tennis"){
+                document.getElementById("8").style.display = "block";
+            }else if(st_value == "rugby"){
+                document.getElementById("9").style.display = "block";
+            }
+        }
+
+        else if(ds_value == "cc"){
+            for (var i = 0; i < 21; i++) {
+                document.getElementById(""+i).style.display = "none";
+            }if(st_value == "all"){
+                document.getElementById("17").style.display = "block";
+            }else if(st_value == "baseball"){
+                document.getElementById("10").style.display = "block";
+            }else if(st_value == "soccer"){
+                document.getElementById("11").style.display = "block";
+            }else if(st_value == "golf"){
+                document.getElementById("12").style.display = "block";
+            }else if(st_value == "tennis"){
+                document.getElementById("13").style.display = "block";
+            }else if(st_value == "rugby"){
+                document.getElementById("14").style.display = "block";
+            }
+        }
+    }                
+</script>
+  <div class="copyright text-center">
+    <p>Designed And Developed by Vishal Gawade & Deepak Goyal</p>
+	</div>
+</body>
+</html>
