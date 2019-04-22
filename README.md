@@ -71,7 +71,7 @@ used AWS to implement and run mapper and reducer.
 
 -   Perform lemmatization on word
 
--   For all words w1 in doc
+-   For all words w1 in doc, which is in top10 words
 
     For all words w2 in Neighbours(w1)
 
