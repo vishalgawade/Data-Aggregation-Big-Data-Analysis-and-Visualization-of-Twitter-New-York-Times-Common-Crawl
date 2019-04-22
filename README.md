@@ -1,8 +1,22 @@
+<p align="center">Data Intensive Computing</br>Hadoop - MapReduce - Tableau </p>
+
+------
+
+![show](https://github.com/vishalgawade/Data-Aggregation-Big-Data-Analysis-and-Visualization-of-Twitter-New-York-Times-Common-Crawl/blob/master/images/show.png)
+
+Goal
+------
+Learn Parallel Processing of Big Data using Hadoop MapReduce and Build Analysis and Visualization Dashboard(s) using Tableau</br>
+
+
 **Topic:** We used Sports as our main topic for Data Collection.
 Subtopic and keywords that we used for collection are baseball, Soccer,
 Tennis, Rugby, Golf.
 --
-
+#### About folder structure:
+###### Part1- Data Collection
+###### Part2- Trying demo on apache hadoop
+###### Part3- Big Data Analysis on AWS EMR and Visualization in Tableau 
 #### Data Collection from below three sources:
 
 1.  **New York Times**: To collect data from New York times, we use New
