@@ -145,7 +145,7 @@ visualization:
 About folder structure:
 ---
 ###### Part1- Data Collection
-###### Part2- Trying demo on apache hadoop
+###### Part2- Trying demo in Apache Hadoop
 ###### Part3- Big Data Analysis on AWS EMR and Visualization in Tableau 
 
 License
