@@ -9,14 +9,9 @@ Goal
 Learn Parallel Processing of Big Data using Hadoop MapReduce and Build Analysis and Visualization Dashboard(s) using Tableau</br>
 
 
-**Topic:** We used Sports as our main topic for Data Collection.
-Subtopic and keywords that we used for collection are baseball, Soccer,
-Tennis, Rugby, Golf.
---
-#### About folder structure:
-###### Part1- Data Collection
-###### Part2- Trying demo on apache hadoop
-###### Part3- Big Data Analysis on AWS EMR and Visualization in Tableau 
+Topic:
+---
+We used Sports as our main topic for Data Collection.Subtopic and keywords that we used for collection are baseball, Soccer,Tennis, Rugby, Golf.
 
 #### Data Collection from below three sources:
 
@@ -146,6 +141,12 @@ deployed the code; you can click on the below link to view the
 visualization:
 
 [Link to Visualization results](https://vishalgawade.github.io/wordcloud_hadoop/visualization.html)
+
+About folder structure:
+---
+###### Part1- Data Collection
+###### Part2- Trying demo on apache hadoop
+###### Part3- Big Data Analysis on AWS EMR and Visualization in Tableau 
 
 License
 ---
