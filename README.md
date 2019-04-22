@@ -1,18 +1,9 @@
-Data Intensive Computing (CSE 587)
-
-Lab-2 (Report)
-
-Submitted by:
-
-Deepak Goyal (dgoyal2)
-
-Vishal Gawade (vgawade)
-
 **Topic:** We used Sports as our main topic for Data Collection.
 Subtopic and keywords that we used for collection are baseball, Soccer,
 Tennis, Rugby, Golf.
+--
 
-Data Collection from below three sources:
+#### Data Collection from below three sources:
 
 1.  **New York Times**: To collect data from New York times, we use New
     York times article search api which gives the articles urls. We
@@ -48,7 +39,7 @@ files. Sort the word in descending order using word count. Get the top
 we process the data to get word co-occurrence of these top 10 words. We
 used AWS to implement and run mapper and reducer.
 
-Explanation of Mapper (Word Count):
+#### Explanation of Mapper (Word Count):
 
 -   Read the data file (data that are collected from different sources).
 
@@ -59,7 +50,7 @@ Explanation of Mapper (Word Count):
 
 -   For all words in data Emit (word, 1)
 
-Explanation of Reducer (Word Count):
+#### Explanation of Reducer (Word Count):
 
 -   Read input data from Mapper.
 
@@ -71,7 +62,7 @@ Explanation of Reducer (Word Count):
 
 -   For first 10 words -\> Emit the (word, count)
 
-Explanation of Mapper (Word Co-occurrence):
+#### Explanation of Mapper (Word Co-occurrence):
 
 -   Read the input (that we get after reducer of word count)
 
@@ -86,7 +77,7 @@ Explanation of Mapper (Word Co-occurrence):
 
     Emit (w1-w2, 1)
 
-Explanation of Reducer (Co-occurrence):
+#### Explanation of Reducer (Co-occurrence):
 
 -   Read input data from Mapper.
 
@@ -100,24 +91,20 @@ Explanation of Reducer (Co-occurrence):
 
 **Flow Chart:**
 
-![D:\\Downloads\\visualization.jpg](media/image1.jpeg){width="4.25in"
-height="8.313043525809274in"}
+![f1](https://github.com/vishalgawade/Data-Aggregation-Big-Data-Analysis-and-Visualization-of-Twitter-New-York-Times-Common-Crawll/blob/master/images/flowchart.jpeg)
 
 While doing all this on AWS, we install all dependencies that are
 required to run the code. To install the dependencies, we made a bash
 file "install\_dependencies.sh" which install all required dependencies.
 Below are the screenshots to explain the steps.
 
-![](media/image2.tiff){width="6.5in" height="3.5217388451443568in"}
+![l1](https://github.com/vishalgawade/Data-Aggregation-Big-Data-Analysis-and-Visualization-of-Twitter-New-York-Times-Common-Crawll/blob/master/images/Picture_1.png)
 
-![C:\\Users\\Deepak\\Desktop\\2.png](media/image3.png){width="6.5in"
-height="3.6260870516185477in"}
+![l2](https://github.com/vishalgawade/Data-Aggregation-Big-Data-Analysis-and-Visualization-of-Twitter-New-York-Times-Common-Crawll/blob/master/images/Picture_2.png)
 
-![C:\\Users\\Deepak\\Desktop\\3.png](media/image4.png){width="6.5in"
-height="3.504348206474191in"}
+![l3](https://github.com/vishalgawade/Data-Aggregation-Big-Data-Analysis-and-Visualization-of-Twitter-New-York-Times-Common-Crawll/blob/master/images/Picture_3.png)
 
-![C:\\Users\\Deepak\\Desktop\\4.png](media/image5.png){width="6.5in"
-height="3.5739129483814525in"}
+![l4](https://github.com/vishalgawade/Data-Aggregation-Big-Data-Analysis-and-Visualization-of-Twitter-New-York-Times-Common-Crawll/blob/master/images/Picture_4.png)
 
 After performing the Mapper and reducer, we get the word count and word
 co-occurrence for all the three sources (NY times, Twitter and Common
